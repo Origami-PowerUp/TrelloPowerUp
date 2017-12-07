@@ -5,9 +5,10 @@ var t = TrelloPowerUp.iframe();
 
 var estimatedTime = document.getElementById('estimatedTime');
 var startDate = document.getElementById('startDate');
-t.render(function(){
 var closePopupWait = 2000;
     var closePopupFlag = 1;
+t.render(function(){
+
 t.get('card', 'shared','startTime', 'null').then(function(time){
     if(time === 'null'){
         $('#startTimer').show();    
