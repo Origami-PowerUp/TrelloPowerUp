@@ -83,15 +83,16 @@
     height: auto;
     margin-bottom: 2px;
 }
-input.starting_date{
-    width: 98%;
-    height: 30px;
-    border: 1px solid #d6dadc;
-    border-radius: 5px;
-    text-align: center;
-    color: rgb(131, 140, 145);
-    font-size: 14px;
-    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+starting_date{
+    background: #EDEFF0;
+    border-radius: 3px;
+    border: 1px solid #CDD2D4;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 1em;
+    padding: .5em;
+    width: 100%;
+    max-width: 500px;
 }
 input.hour {
     width: 98%;
@@ -225,7 +226,7 @@ input[type="date"]::-webkit-inner-spin-button {
              <div class="floating-box">
                  <!-- <input name="startDate" style="border:1px solid #000;height:15px;padding:2px" id="startDate" type="Date" placeholder="18/09/2017" value="">
 			datepicker-select-input -->
-		<input class="datepicker-select-input js-dpicker-date-input js-autofocus" type="Date" placeholder="Enter date" id="startDate" >
+		<input class="starting_date" type="Date" placeholder="Enter date" id="startDate" >
              </div>
              <div class="floating-box">
                  <!-- <input name="estimatedTime" style="border:1px solid #000;height:15px;padding:2px;box-sizing:none;background: #fff !important;padding:0 !important;" id="estimatedTime" type="text" placeholder="00:00" value="">
