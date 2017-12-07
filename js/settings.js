@@ -7,6 +7,7 @@ var estimatedTime = document.getElementById('estimatedTime');
 var startDate = document.getElementById('startDate');
 t.render(function(){
 var closePopupWait = 4000;
+    var closePopupFlag = 0;
 t.get('card', 'shared','startTime', 'null').then(function(time){
     if(time === 'null'){
         $('#startTimer').show();    
@@ -131,9 +132,11 @@ var startDate = document.getElementById('startDate');
 //                                                 t.closePopup();    
 //                                                 })
                                      //   })
-                                        setTimeout(function(){
-                                            t.closePopup();
-                                        },closePopupWait);
+                                        if(closePopupFlag){
+                                            setTimeout(function(){
+                                                t.closePopup();
+                                            },closePopupWait);
+                                        }
                                         
                                     })
                                 })
@@ -190,9 +193,11 @@ $("#startTimer").on('click', function(e){
 //                                                        function (re) {
                                                             
                                                             $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},function(re){t.closePopup();})
-                                                            setTimeout(function(){
-                                                                t.closePopup();
-                                                                },closePopupWait);
+                                                            if(closePopupFlag){
+                                            setTimeout(function(){
+                                                t.closePopup();
+                                            },closePopupWait);
+                                        }
                                                       //  })
                                                     })
                                                 }
@@ -314,9 +319,11 @@ $("#stopTimer").on('click',function(){
                                                 
                                             $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec",
                                                 {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)},function(re){t.closePopup(); })
-                                                setTimeout(function(){
-                                                    t.closePopup();
-                                                },closePopupWait);
+                                                if(closePopupFlag){
+                                            setTimeout(function(){
+                                                t.closePopup();
+                                            },closePopupWait);
+                                        }
                                            // });
                                         })
                             }
