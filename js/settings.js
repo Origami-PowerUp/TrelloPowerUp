@@ -195,7 +195,7 @@ $("#startTimer").on('click', function(e){
                                                 else{
                                                  //   console.log('card not asssigned')
                                                     //alert("This card is not assigned to you!#@@")
-                                                    $("#alertMsg").text("This card is not assigned to you")
+                                                    $("#alertMsg").css("color", "red");
                                                     
 //                                                    return t.popup({
 //                                                                title: 'This card is not assigned to you!',
@@ -319,7 +319,7 @@ $("#stopTimer").on('click',function(){
                             else
                             {
                                 //alert('This card is not assigned to you!!!')
-                                $("#alertMsg").text("This card is not assigned to you")
+                               $("#alertMsg").css("color", "red");
                                  //t.closePopup();
                             } // assignedTo if
                               })
