@@ -7,7 +7,7 @@ var estimatedTime = document.getElementById('estimatedTime');
 var startDate = document.getElementById('startDate');
 t.render(function(){
 var closePopupWait = 4000;
-    var closePopupFlag = 0;
+    var closePopupFlag = 1;
 t.get('card', 'shared','startTime', 'null').then(function(time){
     if(time === 'null'){
         $('#startTimer').show();    
