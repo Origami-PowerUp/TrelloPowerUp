@@ -126,11 +126,15 @@ var startDate = document.getElementById('startDate');
                                     
 //                                    $.post("https://trello-api.crewlogix.com/commentOnCard", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)}
 //                                    ,function(res){
-                                        $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)}
-                                            ,function(res){
-                                                t.closePopup();    
-                                                })
+                                        $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)});
+//                                             ,function(res){
+//                                                 t.closePopup();    
+//                                                 })
                                      //   })
+                                        setTimeOut(function(){
+                                            t.closePopup();
+                                        },1000);
+                                        
                                     })
                                 })
                               })
