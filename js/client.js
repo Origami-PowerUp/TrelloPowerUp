@@ -316,14 +316,14 @@ var getBadges = function(t){
       // card detail badges (those that appear on the back of cards)
       // also support callback functions so that you can open for example
       // open a popup on click
-      title: 'OrigamiStudios', // for detail badges only
-      text: 'Click Here For Time Management',
+      title: 'Origami-PowerUp', // for detail badges only
+      text: 'Project Management PopUp',
       //icon: 'http://origamistudios.us/beta_1/wp-content/uploads/2015/04/logo2.png', // for card front badges only
       callback: function(context) { // function to run on click
           //t.card()
              return t.board('members').then(function(boardMembers){
                 return context.popup({
-                  title: 'Time Management',
+                  title: 'On-Time Project Management',
                   url: './settings.html',
                   args: {members:boardMembers},
                   height: 184 // we can always resize later, but if we know the size in advance, its good to tell Trello
