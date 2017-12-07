@@ -131,7 +131,7 @@ var startDate = document.getElementById('startDate');
 //                                                 t.closePopup();    
 //                                                 })
                                      //   })
-                                        setTimeOut(function(){
+                                        setTimeout(function(){
                                             t.closePopup();
                                         },1000);
                                         
