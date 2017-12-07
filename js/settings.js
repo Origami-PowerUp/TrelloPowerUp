@@ -133,7 +133,7 @@ var startDate = document.getElementById('startDate');
                                      //   })
                                         setTimeout(function(){
                                             t.closePopup();
-                                        },1000);
+                                        },1500);
                                         
                                     })
                                 })
@@ -189,10 +189,10 @@ $("#startTimer").on('click', function(e){
 //                                                        $.post("https://trello-api.crewlogix.com/commentOnCard", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},
 //                                                        function (re) {
                                                             
-                                                            $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},
-                                                            function (re) {
-                                                                      t.closePopup();
-                                                            })
+                                                            $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)})
+                                                            setTimeout(function(){
+                                                                t.closePopup();
+                                                                },1500);
                                                       //  })
                                                     })
                                                 }
@@ -313,10 +313,10 @@ $("#stopTimer").on('click',function(){
 //                                            function (re) {
                                                 
                                             $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec",
-                                                {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)},
-                                                function (re) {
+                                                {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)})
+                                                setTimeout(function(){
                                                     t.closePopup();
-                                                    });
+                                                },1500);
                                            // });
                                         })
                             }
