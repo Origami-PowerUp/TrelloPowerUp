@@ -6,7 +6,7 @@ var t = TrelloPowerUp.iframe();
 var estimatedTime = document.getElementById('estimatedTime');
 var startDate = document.getElementById('startDate');
 t.render(function(){
-
+var closePopupWait = 4000;
 t.get('card', 'shared','startTime', 'null').then(function(time){
     if(time === 'null'){
         $('#startTimer').show();    
@@ -126,14 +126,14 @@ var startDate = document.getElementById('startDate');
                                     
 //                                    $.post("https://trello-api.crewlogix.com/commentOnCard", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)}
 //                                    ,function(res){
-                                        $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)});
+                                        $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)},function(re){t.closePopup();});
 //                                             ,function(res){
 //                                                 t.closePopup();    
 //                                                 })
                                      //   })
                                         setTimeout(function(){
                                             t.closePopup();
-                                        },1500);
+                                        },closePopupWait);
                                         
                                     })
                                 })
@@ -189,10 +189,10 @@ $("#startTimer").on('click', function(e){
 //                                                        $.post("https://trello-api.crewlogix.com/commentOnCard", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},
 //                                                        function (re) {
                                                             
-                                                            $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)})
+                                                            $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},function(re){t.closePopup();})
                                                             setTimeout(function(){
                                                                 t.closePopup();
-                                                                },1500);
+                                                                },closePopupWait);
                                                       //  })
                                                     })
                                                 }
@@ -313,10 +313,10 @@ $("#stopTimer").on('click',function(){
 //                                            function (re) {
                                                 
                                             $.post("https://script.google.com/a/origamistudios.us/macros/s/AKfycbxoYQfMrzAmRKJMaNEImAtJvWX1gpyiYdFFMR9yTZ-50JgwWec/exec",
-                                                {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)})
+                                                {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)},function(re){t.closePopup(); })
                                                 setTimeout(function(){
                                                     t.closePopup();
-                                                },1500);
+                                                },closePopupWait);
                                            // });
                                         })
                             }
