@@ -129,7 +129,7 @@ var startDate = document.getElementById('startDate');
                                     
 //                                    $.post("https://trello-api.crewlogix.com/commentOnCard", {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)}
 //                                    ,function(res){
-                                        $.post(DEV_SERVER_URL, {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)},function(re){t.closePopup();});
+                                        $.post(PROD_SERVER_URL, {id: cardId.id,estimatedTime:estimatedTime.value,boardName: boardName.name, member: member.username,startDate:startDate.value ,text: text, assignedTo: assignedTo, assignedToMemberId: assignedToMemberId,rData: JSON.stringify(rData)},function(re){t.closePopup();});
 //                                             ,function(res){
 //                                                 t.closePopup();    
 //                                                 })
@@ -194,7 +194,7 @@ $("#startTimer").on('click', function(e){
 //                                                        $.post("https://trello-api.crewlogix.com/commentOnCard", {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},
 //                                                        function (re) {
                                                             
-                                                            $.post(DEV_SERVER_URL, {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},function(re){t.closePopup();})
+                                                            $.post(PROD_SERVER_URL, {id: cardData.id,startDate:startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " started timer", rData: JSON.stringify(rData)},function(re){t.closePopup();})
                                                             if(closePopupFlag){
                                             setTimeout(function(){
                                                 t.closePopup();
@@ -319,7 +319,7 @@ $("#stopTimer").on('click',function(){
 //                                            {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)},
 //                                            function (re) {
                                                 
-                                            $.post(DEV_SERVER_URL,
+                                            $.post(PROD_SERVER_URL,
                                                 {id: cardId.id, startDate: startDate,assignedTo: assignedTo,estimatedTime:estimatedTime,member: member.username, text: " stopped timer ", rData: JSON.stringify(rData)},function(re){t.closePopup(); })
                                                 if(closePopupFlag){
                                             setTimeout(function(){
