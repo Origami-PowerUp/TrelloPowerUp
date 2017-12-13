@@ -101,7 +101,7 @@ var estimatedTime = document.getElementById('estimatedTime');
 var startDate = document.getElementById('startDate');
             return t.set('card','shared','startDate',startDate.value)
             .then(function(){ // second curly
-                console.log('estimated time = ', estimatedTime.value);
+              //  console.log('estimated time = ', estimatedTime.value);
                 if(estimatedTime.value.match(/^[0-9]{2}:[0-9]{2}$/)){
                     
                 t.set('card','shared','estimatedTime',estimatedTime.value)            
