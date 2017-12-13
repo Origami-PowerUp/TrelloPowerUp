@@ -100,10 +100,10 @@ document.getElementById('save').addEventListener('click', function(e){
 var estimatedTime = document.getElementById('estimatedTime');
 var startDate = document.getElementById('startDate');
             return t.set('card','shared','startDate',startDate.value)
-            .then(function(){
-                if(estimatedTime.value.length < 1){
-                    estimatedTime.value = ''
-                }
+            .then(function(){ // second curly
+                console.log('estimated time = ', estimatedTime.value);
+                if(estimatedTime.value.match(/^[0-9]{2}:[0-9]{2}$/)){
+                    
                 t.set('card','shared','estimatedTime',estimatedTime.value)            
                 .then(function(){
                     t.get('card', 'shared', 'startTime', 'null').then(function (time) {
@@ -147,7 +147,18 @@ var startDate = document.getElementById('startDate');
                         })
                     })
                 })
-            })
+                    
+                    
+                }
+                else{
+                    $("#alertMsg").text("Estimated time should be 00:00 format i.e HH:MM");
+                    $("#alertMsg").css("color", "red");
+                }
+                
+                
+                
+               
+            }) // second curly
 });
 
 
