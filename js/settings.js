@@ -153,6 +153,7 @@ var startDate = document.getElementById('startDate');
                 else{
                     $("#alertMsg").text("Estimated time should be 00:00 format i.e HH:MM");
                     $("#alertMsg").css("color", "red");
+                    $("#alertMsg").css("font-size", "7px");
                 }
                 
                 
