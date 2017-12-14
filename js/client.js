@@ -331,7 +331,7 @@ var getBadges = function(t){
   //            })
   //    }
   //  }
-    , 
+  //  , 
 //    {
 //      // or for simpler use cases you can also provide a url
 //      // when the user clicks on the card detail badge they will
