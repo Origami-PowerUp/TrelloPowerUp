@@ -327,9 +327,9 @@ var getBadges = function(t){
   //                url: './settings.html',
   //                args: {members:boardMembers},
   //                height: 184 // we can always resize later, but if we know the size in advance, its good to tell Trello
-                });        
-              })
-      }
+  //              });        
+  //            })
+  //    }
     }
     , 
 //    {
