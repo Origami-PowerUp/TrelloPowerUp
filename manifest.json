@@ -5,19 +5,14 @@
     "url": "https://trello-logos.s3.amazonaws.com/02fbf3f57d1fdfc86a8ef88b651b47f4/30.png"
   },
   "author": "Khurram Ijaz",
-  "capabilities": [
-    "authorization-status",
-    "attachment-sections",
-    "attachment-thumbnail",
+  "capabilities": [    
     "board-buttons",
     "callback",
     "card-badges",
     "card-buttons",
     "card-detail-badges",
     "card-from-url",
-    "format-url",
-    "show-authorization",
-    "show-settings"
+    "format-url",        
   ],
   "connectors": {
     "iframe": {
