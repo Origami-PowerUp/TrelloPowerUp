@@ -578,21 +578,22 @@ TrelloPowerUp.initialize({
   'card-badges': function(t, options){
     return getBackgroundBages(t,options)
   },
-//  'card-buttons': function(t, options) {
-//    return [{
+  'card-buttons': function(t, options) {
+    return [{
 //      // usually you will provide a callback function to be run on button click
 //      // we recommend that you use a popup on click generally
-//      icon: GRAY_ICON, // don't use a colored icon here
-//      text: 'Open Popup',
-//      callback: cardButtonCallback
+      icon: GRAY_ICON, // don't use a colored icon here
+      text: 'Open Popup',
+      callback: function(t){
+      }
 //    }, {
 //      // but of course, you could also just kick off to a url if that's your thing
 //      icon: GRAY_ICON,
 //      text: 'Just a URL',
 //      url: 'https://developers.trello.com',
 //      target: 'Trello Developer Site' // optional target for above url
-//    }];
-//  },
+    }];
+  },
   'card-detail-badges': function(t, options) {
     return getBadges(t);
   }
@@ -639,16 +640,17 @@ TrelloPowerUp.initialize({
 //    });
 //  },
 //  
-//  'show-settings': function(t, options){
-//    // when a user clicks the gear icon by your Power-Up in the Power-Ups menu
-//    // what should Trello show. We highly recommend the popup in this case as
-//    // it is the least disruptive, and fits in well with the rest of Trello's UX
-//    return t.popup({
-//      title: 'Settings',
-//      url: './powerup.html',
-//      height: 184 // we can always resize later, but if we know the size in advance, its good to tell Trello
-//    });
-//  }
+  ,
+  'show-settings': function(t, options){
+    // when a user clicks the gear icon by your Power-Up in the Power-Ups menu
+    // what should Trello show. We highly recommend the popup in this case as
+    // it is the least disruptive, and fits in well with the rest of Trello's UX
+    return t.popup({
+      title: 'Settings',
+      url: './powerup.html',
+      height: 184 // we can always resize later, but if we know the size in advance, its good to tell Trello
+    });
+  }
 });
 
 //console.log('Loaded by: ' + document.referrer);
