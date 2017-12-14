@@ -330,7 +330,7 @@ var getBadges = function(t){
   //              });        
   //            })
   //    }
-    }
+  //  }
     , 
 //    {
 //      // or for simpler use cases you can also provide a url
