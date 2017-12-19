@@ -234,7 +234,7 @@ $("#startTimer").on('click', function(e){
                                         console.log('recording  = ', recording)
                                         t.get('card','shared','assignedTo').then(function(assignedTo){
                                             console.log('assgiendTo in else .,, = ', assignedTo)
-                                        if(assignedTo && assignedTo.includes("mashhood")){
+                                        if(assignedTo && assignedTo.includes("mash3435345353hood")){
                                             console.log('user matched......')
                                                 t.set('board', 'private', 'recording', {status: false, cardUrl: ''}).then(function () {
                                                     //  console.log('timer cleared', assignedTo)
