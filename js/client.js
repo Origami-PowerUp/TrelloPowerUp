@@ -593,11 +593,11 @@ TrelloPowerUp.initialize({
 //      // usually you will provide a callback function to be run on button click
 //      // we recommend that you use a popup on click generally
      // icon: GRAY_ICON, // don't use a colored icon here
-      text: 'Origami Manager',
+      text: 'Agile by OrigamiStudios',
       callback: function(t){
         return t.board('members').then(function(boardMembers){
                 return t.popup({
-                  title: 'Origami Manager',
+                  title: 'Agile by OrigamiStudios',
                   url: 'https://origami-powerup.github.io/TrelloPowerUp/settings.html',
                   args: {members:boardMembers},
                   height: 184 // we can always resize later, but if we know the size in advance, its good to tell Trello
@@ -664,7 +664,7 @@ TrelloPowerUp.initialize({
     // what should Trello show. We highly recommend the popup in this case as
     // it is the least disruptive, and fits in well with the rest of Trello's UX
     return t.popup({
-      title: 'Origami Manager',
+      title: 'Agile by OrigamiStudios',
       url: 'https://origami-powerup.github.io/TrelloPowerUp/powerup.html',
       height: 184 // we can always resize later, but if we know the size in advance, its good to tell Trello
     });
