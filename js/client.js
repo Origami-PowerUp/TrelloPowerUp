@@ -369,7 +369,7 @@ var boardButtonCallback = function(t){
         callback: function(t){
             t.getAll().then(function(boardInfo){
                  t.board('members').then(function (members) {
-                    console.log('boardInfo = ', boardInfo)
+                 //   console.log('boardInfo = ', boardInfo)
                   //  var t = window.TrelloPowerUp.iframe();
                    
         
