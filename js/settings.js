@@ -173,7 +173,7 @@ $("#startTimer").on('click', function(e){
                         t.get('board','private','recording','null').then(function(recording){
                                    //    console.log('recording = ', recording)
                             if(recording === 'null' || recording.status == false){
-                                            console.log('previousTime  =', time.previousTime)
+                                        //    console.log('previousTime  =', time.previousTime)
                                             let previousTime = 0;
                                             if(time.previousTime > 0){
                                                 previousTime = time.previousTime;
@@ -230,11 +230,11 @@ $("#startTimer").on('click', function(e){
                                         }) 
                                     }// recording
                                     else{
-                                        console.log('recording  = ', recording)
+                                 //       console.log('recording  = ', recording)
                                         t.get('card','shared','assignedTo').then(function(assignedTo){
-                                            console.log('assgiendTo in else .,, = ', assignedTo)
+                                    //        console.log('assgiendTo in else .,, = ', assignedTo)
                                         if(assignedTo && assignedTo.includes("mash3435345353hood")){
-                                            console.log('user matched......')
+                                         //   console.log('user matched......')
                                                 t.set('board', 'private', 'recording', {status: false, cardUrl: ''}).then(function () {
                                                     //  console.log('timer cleared', assignedTo)
                                                       //alert('your timer is cleared please inform khurram')
